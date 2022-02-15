@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  backend:
+    image: landovargas/toyjs:1.0
+    ports:
+      - "80:8080"
+    volumes:
+    - type: bind
+      source: ./
+      target: /app
