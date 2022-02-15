@@ -1,8 +1,16 @@
 function readFile(filePath = "/app/src/files/message.json")
 {
-    const fs = require("fs");
-    let messageFile = fs.readFileSync(filePath);
-    let messages = JSON.parse(messageFile);
+    let messages;
+    try
+    {
+        const fs = require("fs");
+        let messageFile = fs.readFileSync(filePath);
+        messages = JSON.parse(messageFile);
+    }
+    catch(e)
+    {
+        messages = {messages:[]};
+    }
 
     return messages;
 }
