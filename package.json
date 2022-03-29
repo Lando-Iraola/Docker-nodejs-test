@@ -4,12 +4,13 @@
   "description": "Toying with docker and nodejs",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon -L",
+    "start": "nodemon -L --ignore files/message.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lando Vargas",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.2"
   },
   "devDependencies": {
