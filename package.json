@@ -4,7 +4,8 @@
   "description": "Toying with docker and nodejs",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon -L --ignore files/message.json",
+    "start": "node ./src/index.js",
+    "dev": "nodemon -L --ignore files/message.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lando Vargas",

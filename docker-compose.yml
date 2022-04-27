@@ -1,12 +1,13 @@
 version: "3.9"
 services:
   backend:
-    image: landovargas/toyjs:1.0
+    build: .
     ports:
       - "80:80"
     volumes:
-    - type: bind
-      source: ./
-      target: /app
+    - toy-js:/app
     environment:
       - PORT=80
+
+volumes:
+  toy-js:
